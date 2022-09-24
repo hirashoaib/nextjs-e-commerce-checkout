@@ -1,10 +1,22 @@
 import React from "react";
-import { Heading, Text ,Divider, HStack,Stack, Image, AspectRatio, VStack,useColorMode,useColorModeValue, Switch } from "@chakra-ui/react";
+import {
+  Heading,
+  Text,
+  Divider,
+  HStack,
+  Stack,
+  Image,
+  AspectRatio,
+  VStack,
+  useColorMode,
+  useColorModeValue,
+  Switch,
+} from "@chakra-ui/react";
 
-const cart = () => { 
-  const {colorMode, toggleColorMode} = useColorMode();
-  const bgColor= useColorModeValue ('gray.50', 'whiteAlpha.50');
-  const secondaryTextColor= useColorModeValue('gray.600', 'gray.400');
+const cart = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const bgColor = useColorModeValue("gray.50", "whiteAlpha.50");
+  const secondaryTextColor = useColorModeValue("gray.600", "gray.400");
 
   return (
     <VStack
@@ -18,23 +30,19 @@ const cart = () => {
       <VStack alignItems="flex-start" spacing={3}>
         <Heading size="2xl">Your cart</Heading>
         <HStack spacing={2}>
-        <Text>
-        {colorMode === 'light' ? 'Dark' : 'Light'} Mode {' '}
-          
-        </Text>
-        <Switch colorScheme={"brand"} size="sm" onChange={toggleColorMode}></Switch>
+          <Text>{colorMode === "light" ? "Dark" : "Light"} Mode </Text>
+          <Switch size="sm" onChange={toggleColorMode}></Switch>
         </HStack>
-        
-         
       </VStack>
 
-         <HStack spacing={{ base:3, md:6}} 
-         alignItems={{ base:'flex-start', md:'center' }}
-         w="full"
-         >
-             <AspectRatio ratio={1} w={24}>
+      <HStack
+        spacing={{ base: 3, md: 6 }}
+        alignItems={{ base: "flex-start", md: "center" }}
+        w="full"
+      >
+        <AspectRatio ratio={1} w={24}>
           <Image src="/product.png" alt="Product image" />
-        </AspectRatio>  
+        </AspectRatio>
 
         <Stack
           spacing={0}
@@ -44,15 +52,17 @@ const cart = () => {
           alignItems="center"
         >
           <VStack w="full" spacing={0} alignItems="flex-start">
-            <Heading fontSize={["sm","md"]}>Penny board</Heading>
-            <Text fontSize={["xs","sm"]} color={secondaryTextColor}>PNYCOMP27541</Text>
+            <Heading fontSize={["sm", "md"]}>Penny board</Heading>
+            <Text fontSize={["xs", "sm"]} color={secondaryTextColor}>
+              PNYCOMP27541
+            </Text>
           </VStack>
           <Heading size="sm" textAlign="end">
             $119.00
           </Heading>
         </Stack>
-         </HStack>
-         <VStack spacing={4} alignItems="stretch" w="full">
+      </HStack>
+      <VStack spacing={4} alignItems="stretch" w="full">
         <HStack justifyContent="space-between">
           <Text color={secondaryTextColor}>Subtotal</Text>
           <Heading size="sm">$119.00</Heading>
@@ -71,9 +81,7 @@ const cart = () => {
         <Text color={secondaryTextColor}>Total</Text>
         <Heading size="lg">$162.79</Heading>
       </HStack>
-
     </VStack>
-
   );
 };
 

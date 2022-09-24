@@ -14,7 +14,7 @@ import {
   Select,
 } from "@chakra-ui/react";
 const details = () => {
-  const colSpan = useBreakpointValue ({base:2, md: 1})
+  const colSpan = useBreakpointValue({ base: 2, md: 1 });
   return (
     <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
       <VStack spacing={3} alignItems="flex-start">
@@ -50,23 +50,23 @@ const details = () => {
           <FormControl>
             <FormLabel> Country </FormLabel>
             <Select>
-             <option value="usa"> United States of America</option>
-             <option value="pak"> Pakistan</option>
-             <option value="uae"> United Arab Emirates </option>
-             <option value="de"> Germany</option>
-
+              <option value="usa"> United States of America</option>
+              <option value="pak"> Pakistan</option>
+              <option value="uae"> United Arab Emirates </option>
+              <option value="de"> Germany</option>
             </Select>
           </FormControl>
         </GridItem>
-            <GridItem colSpan={2}>
-              <Checkbox colorScheme={"brand"} defaultChecked> Ship to billing address </Checkbox>
-            </GridItem>
-            <GridItem colSpan={2}>
-             <Button colorScheme={"brand"} size="lg" w="full"> Place Order </Button>
-            </GridItem>
-            
+        <GridItem colSpan={2}>
+          <Checkbox defaultChecked> Ship to billing address </Checkbox>
+        </GridItem>
+        <GridItem colSpan={2}>
+          <Button variant="primary" size="lg" w="full">
+            {" "}
+            Place Order{" "}
+          </Button>
+        </GridItem>
       </SimpleGrid>
-      
     </VStack>
   );
 };
