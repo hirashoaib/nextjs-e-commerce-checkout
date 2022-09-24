@@ -8,15 +8,15 @@ import {
   Image,
   AspectRatio,
   VStack,
-  useColorMode,
-  useColorModeValue,
+  useColorMode as UseColorMode,
+  useColorModeValue as UseColorModeValue,
   Switch,
 } from "@chakra-ui/react";
 
 const cart = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const bgColor = useColorModeValue("gray.50", "whiteAlpha.50");
-  const secondaryTextColor = useColorModeValue("gray.600", "gray.400");
+  const { colorMode, toggleColorMode } = UseColorMode();
+  const bgColor = UseColorModeValue("gray.50", "whiteAlpha.50");
+  const secondaryTextColor = UseColorModeValue("gray.600", "gray.400");
 
   return (
     <VStack

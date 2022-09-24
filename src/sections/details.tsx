@@ -10,11 +10,11 @@ import {
   GridItem,
   Checkbox,
   Button,
-  useBreakpointValue,
+  useBreakpointValue as UseBreakpointValue,
   Select,
 } from "@chakra-ui/react";
 const details = () => {
-  const colSpan = useBreakpointValue({ base: 2, md: 1 });
+  const colSpan = UseBreakpointValue({ base: 2, md: 1 });
   return (
     <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
       <VStack spacing={3} alignItems="flex-start">
