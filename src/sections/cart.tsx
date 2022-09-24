@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Text, Button,Divider, HStack,Stack, Image, AspectRatio, VStack,useColorMode,useColorModeValue, Switch } from "@chakra-ui/react";
+import { Heading, Text ,Divider, HStack,Stack, Image, AspectRatio, VStack,useColorMode,useColorModeValue, Switch } from "@chakra-ui/react";
 
 const cart = () => { 
   const {colorMode, toggleColorMode} = useColorMode();
@@ -22,7 +22,7 @@ const cart = () => {
         {colorMode === 'light' ? 'Dark' : 'Light'} Mode {' '}
           
         </Text>
-        <Switch size="sm" onChange={toggleColorMode}></Switch>
+        <Switch colorScheme={"brand"} size="sm" onChange={toggleColorMode}></Switch>
         </HStack>
         
          
@@ -44,8 +44,8 @@ const cart = () => {
           alignItems="center"
         >
           <VStack w="full" spacing={0} alignItems="flex-start">
-            <Heading size="md">Penny board</Heading>
-            <Text color={secondaryTextColor}>PNYCOMP27541</Text>
+            <Heading fontSize={["sm","md"]}>Penny board</Heading>
+            <Text fontSize={["xs","sm"]} color={secondaryTextColor}>PNYCOMP27541</Text>
           </VStack>
           <Heading size="sm" textAlign="end">
             $119.00
